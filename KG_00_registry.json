@@ -1,0 +1,857 @@
+{
+ "version": "1.0",
+ "date": "2026-11-13",
+ "ids": {
+  "lab:concept/accounting-equation": {
+   "ko": "회계등식",
+   "en": "accounting equation",
+   "page": "06m_midterm_review",
+   "domain": [
+    "stats"
+   ]
+  },
+  "lab:concept/accrual-basis": {
+   "ko": "발생주의",
+   "en": "accrual basis",
+   "page": "06m_midterm_review",
+   "domain": [
+    "stats"
+   ]
+  },
+  "lab:concept/financial-statements": {
+   "ko": "재무제표 3종의 연결",
+   "en": "three financial statements",
+   "page": "06m_midterm_review",
+   "domain": [
+    "stats"
+   ]
+  },
+  "lab:method/01-duel-fly": {
+   "ko": "손익계산서의 순이익",
+   "en": "duel choice A 01",
+   "page": "01_accounting_basics",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/01-duel-robo": {
+   "ko": "통장 잔고",
+   "en": "duel choice B 01",
+   "page": "01_accounting_basics",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/asset": {
+   "ko": "자산",
+   "en": "asset",
+   "page": "01_accounting_basics",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/liability": {
+   "ko": "부채",
+   "en": "liability",
+   "page": "01_accounting_basics",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/equity": {
+   "ko": "자본",
+   "en": "equity",
+   "page": "01_accounting_basics",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:term/debit": {
+   "ko": "차변",
+   "en": "debit",
+   "page": "01_accounting_basics",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:term/credit": {
+   "ko": "대변",
+   "en": "credit",
+   "page": "01_accounting_basics",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/cash-basis": {
+   "ko": "현금주의",
+   "en": "cash basis",
+   "page": "01_accounting_basics",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/accounts-receivable": {
+   "ko": "매출채권",
+   "en": "accounts receivable",
+   "page": "02_revenue_inventory",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/trial-balance": {
+   "ko": "시산표",
+   "en": "trial balance",
+   "page": "01_accounting_basics",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/balance-sheet": {
+   "ko": "재무상태표",
+   "en": "balance sheet",
+   "page": "01_accounting_basics",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/income-statement": {
+   "ko": "손익계산서",
+   "en": "income statement",
+   "page": "01_accounting_basics",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/cash-flow-statement": {
+   "ko": "현금흐름표",
+   "en": "cash flow statement",
+   "page": "10_cashflow_ratios",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/accounts-receivable-flow": {
+   "ko": "매출과 매출채권의 연결",
+   "en": "revenue–receivable link",
+   "page": "06m_midterm_review",
+   "domain": [
+    "stats"
+   ]
+  },
+  "lab:concept/allowance-for-doubtful-accounts": {
+   "ko": "대손충당금",
+   "en": "allowance for doubtful accounts",
+   "page": "06m_midterm_review",
+   "domain": [
+    "stats"
+   ]
+  },
+  "lab:concept/cost-of-goods-sold": {
+   "ko": "매출원가와 재고자산의 연결",
+   "en": "cost of goods sold and inventory",
+   "page": "06m_midterm_review",
+   "domain": [
+    "stats"
+   ]
+  },
+  "lab:method/02-duel-fly": {
+   "ko": "현금 위주 1,200만 원",
+   "en": "duel choice A 02",
+   "page": "02_revenue_inventory",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/02-duel-robo": {
+   "ko": "외상 위주 2,000만 원",
+   "en": "duel choice B 02",
+   "page": "02_revenue_inventory",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/aging-analysis": {
+   "ko": "연령 분석",
+   "en": "aging analysis",
+   "page": "02_revenue_inventory",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:term/net-carrying-amount": {
+   "ko": "순장부금액",
+   "en": "net carrying amount",
+   "page": "02_revenue_inventory",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/bad-debt-expense": {
+   "ko": "대손상각비",
+   "en": "bad debt expense",
+   "page": "02_revenue_inventory",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/inventory": {
+   "ko": "재고자산",
+   "en": "inventory",
+   "page": "08_balance_sheet_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/gross-profit": {
+   "ko": "매출총이익",
+   "en": "gross profit",
+   "page": "02_revenue_inventory",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/gross-margin": {
+   "ko": "매출총이익률",
+   "en": "gross margin",
+   "page": "02_revenue_inventory",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/accounts-payable": {
+   "ko": "매입채무",
+   "en": "accounts payable",
+   "page": "03_payables_prepaid",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/accounts-payable-terms": {
+   "ko": "매입채무와 결제조건",
+   "en": "accounts payable and credit terms",
+   "page": "06m_midterm_review",
+   "domain": [
+    "stats"
+   ]
+  },
+  "lab:concept/prepaid-expense": {
+   "ko": "선급비용",
+   "en": "prepaid expense",
+   "page": "06m_midterm_review",
+   "domain": [
+    "stats"
+   ]
+  },
+  "lab:concept/fixed-variable-cost": {
+   "ko": "고정비·변동비와 손익분기점",
+   "en": "fixed and variable costs, break-even point",
+   "page": "06m_midterm_review",
+   "domain": [
+    "stats"
+   ]
+  },
+  "lab:method/03-duel-fly": {
+   "ko": "받자마자 바로 갚기",
+   "en": "duel choice A 03",
+   "page": "03_payables_prepaid",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/03-duel-robo": {
+   "ko": "30일째에 갚기",
+   "en": "duel choice B 03",
+   "page": "03_payables_prepaid",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:term/cash-discount": {
+   "ko": "현금할인",
+   "en": "cash discount",
+   "page": "03_payables_prepaid",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:term/credit-terms": {
+   "ko": "결제조건",
+   "en": "credit terms",
+   "page": "03_payables_prepaid",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/accrued-expense": {
+   "ko": "미지급비용",
+   "en": "accrued expense",
+   "page": "09_turnover_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/operating-expense": {
+   "ko": "영업비용",
+   "en": "operating expense",
+   "page": "03_payables_prepaid",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/fixed-cost": {
+   "ko": "고정비",
+   "en": "fixed cost",
+   "page": "03_payables_prepaid",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/variable-cost": {
+   "ko": "변동비",
+   "en": "variable cost",
+   "page": "03_payables_prepaid",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/break-even-point": {
+   "ko": "손익분기점",
+   "en": "break-even point",
+   "page": "03_payables_prepaid",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/straight-line-depreciation": {
+   "ko": "자산화와 정액법 감가상각",
+   "en": "capitalization and straight-line depreciation",
+   "page": "06m_midterm_review",
+   "domain": [
+    "stats"
+   ]
+  },
+  "lab:method/declining-balance-depreciation": {
+   "ko": "정률법 감가상각",
+   "en": "declining-balance depreciation",
+   "page": "06m_midterm_review",
+   "domain": [
+    "stats"
+   ]
+  },
+  "lab:concept/income-tax-net-income": {
+   "ko": "법인세와 당기순이익",
+   "en": "income tax and net income",
+   "page": "06m_midterm_review",
+   "domain": [
+    "stats"
+   ]
+  },
+  "lab:method/04-duel-fly": {
+   "ko": "5년에 나눠 적기 (정액법)",
+   "en": "duel choice A 04",
+   "page": "04_fixed_assets_tax",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/04-duel-robo": {
+   "ko": "산 해에 한 번에 비용으로",
+   "en": "duel choice B 04",
+   "page": "04_fixed_assets_tax",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/ppe": {
+   "ko": "유형자산",
+   "en": "property, plant and equipment",
+   "page": "04_fixed_assets_tax",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/capitalization": {
+   "ko": "자산화",
+   "en": "capitalization",
+   "page": "04_fixed_assets_tax",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/depreciation": {
+   "ko": "감가상각",
+   "en": "depreciation",
+   "page": "04_fixed_assets_tax",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:term/useful-life": {
+   "ko": "내용연수",
+   "en": "useful life",
+   "page": "04_fixed_assets_tax",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:term/residual-value": {
+   "ko": "잔존가치",
+   "en": "residual value",
+   "page": "04_fixed_assets_tax",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/accumulated-depreciation": {
+   "ko": "감가상각누계액",
+   "en": "accumulated depreciation",
+   "page": "04_fixed_assets_tax",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/income-before-tax": {
+   "ko": "세전이익",
+   "en": "income before tax",
+   "page": "04_fixed_assets_tax",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/net-income": {
+   "ko": "당기순이익",
+   "en": "net income",
+   "page": "04_fixed_assets_tax",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:term/taxable-income": {
+   "ko": "과세표준",
+   "en": "taxable income",
+   "page": "04_fixed_assets_tax",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/list-and-dict": {
+   "ko": "목록(list)과 사전(dict)",
+   "en": "list and dict",
+   "page": "06m_midterm_review",
+   "domain": [
+    "stats"
+   ]
+  },
+  "lab:concept/array-and-dataframe": {
+   "ko": "배열(array)과 표(DataFrame)",
+   "en": "array and DataFrame",
+   "page": "06m_midterm_review",
+   "domain": [
+    "stats"
+   ]
+  },
+  "lab:method/groupby-and-plot": {
+   "ko": "묶어 세기(groupby)와 시각화",
+   "en": "group-by aggregation and plotting",
+   "page": "06m_midterm_review",
+   "domain": [
+    "stats"
+   ]
+  },
+  "lab:method/05-duel-fly": {
+   "ko": "중앙값 140만 원",
+   "en": "duel choice A 05",
+   "page": "05_python_basics",
+   "domain": [
+    "accounting",
+    "coding"
+   ]
+  },
+  "lab:method/05-duel-robo": {
+   "ko": "평균 270만 원",
+   "en": "duel choice B 05",
+   "page": "05_python_basics",
+   "domain": [
+    "accounting",
+    "coding"
+   ]
+  },
+  "lab:concept/python-list": {
+   "ko": "목록",
+   "en": "list",
+   "page": "05_python_basics",
+   "domain": [
+    "accounting",
+    "coding"
+   ]
+  },
+  "lab:concept/python-dict": {
+   "ko": "사전",
+   "en": "dict",
+   "page": "05_python_basics",
+   "domain": [
+    "accounting",
+    "coding"
+   ]
+  },
+  "lab:term/index": {
+   "ko": "번호",
+   "en": "index",
+   "page": "05_python_basics",
+   "domain": [
+    "accounting",
+    "coding"
+   ]
+  },
+  "lab:concept/numpy-array": {
+   "ko": "배열",
+   "en": "array",
+   "page": "05_python_basics",
+   "domain": [
+    "accounting",
+    "coding"
+   ]
+  },
+  "lab:concept/dataframe": {
+   "ko": "표",
+   "en": "DataFrame",
+   "page": "05_python_basics",
+   "domain": [
+    "accounting",
+    "coding"
+   ]
+  },
+  "lab:method/boolean-filtering": {
+   "ko": "조건 거르기",
+   "en": "boolean filtering",
+   "page": "05_python_basics",
+   "domain": [
+    "accounting",
+    "coding"
+   ]
+  },
+  "lab:method/pivot-table": {
+   "ko": "교차표",
+   "en": "pivot table",
+   "page": "05_python_basics",
+   "domain": [
+    "accounting",
+    "coding"
+   ]
+  },
+  "lab:concept/median": {
+   "ko": "중앙값",
+   "en": "median",
+   "page": "05_python_basics",
+   "domain": [
+    "accounting",
+    "coding"
+   ]
+  },
+  "lab:concept/descriptive-statistics": {
+   "ko": "요약 통계",
+   "en": "descriptive statistics",
+   "page": "05_python_basics",
+   "domain": [
+    "accounting",
+    "coding"
+   ]
+  },
+  "lab:method/inventory-costing": {
+   "ko": "재고자산 평가 방법",
+   "en": "inventory costing methods",
+   "page": "08_balance_sheet_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/capital-vs-revenue-expenditure": {
+   "ko": "자본적 지출과 수익적 지출",
+   "en": "capital vs revenue expenditure",
+   "page": "08_balance_sheet_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/depreciation-method-comparison": {
+   "ko": "감가상각 방법의 비교",
+   "en": "comparison of depreciation methods",
+   "page": "08_balance_sheet_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/08-duel-fly": {
+   "ko": "후입선출법",
+   "en": "duel choice A 08",
+   "page": "08_balance_sheet_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/08-duel-robo": {
+   "ko": "선입선출법",
+   "en": "duel choice B 08",
+   "page": "08_balance_sheet_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/fifo": {
+   "ko": "선입선출법",
+   "en": "first-in first-out",
+   "page": "08_balance_sheet_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/lifo": {
+   "ko": "후입선출법",
+   "en": "last-in first-out",
+   "page": "08_balance_sheet_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/weighted-average-cost": {
+   "ko": "총평균법",
+   "en": "weighted average cost",
+   "page": "08_balance_sheet_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/current-assets": {
+   "ko": "유동자산",
+   "en": "current assets",
+   "page": "08_balance_sheet_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/acquisition-cost": {
+   "ko": "취득원가",
+   "en": "acquisition cost",
+   "page": "08_balance_sheet_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/capital-expenditure": {
+   "ko": "자본적 지출",
+   "en": "capital expenditure",
+   "page": "08_balance_sheet_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/revenue-expenditure": {
+   "ko": "수익적 지출",
+   "en": "revenue expenditure",
+   "page": "08_balance_sheet_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/non-current-assets": {
+   "ko": "비유동자산",
+   "en": "non-current assets",
+   "page": "08_balance_sheet_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:term/carrying-amount": {
+   "ko": "장부가액",
+   "en": "carrying amount",
+   "page": "08_balance_sheet_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/timing-differences": {
+   "ko": "비용과 현금의 시점 차이",
+   "en": "timing differences between expense and cash",
+   "page": "09_turnover_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/09-duel-fly": {
+   "ko": "13주 그대로",
+   "en": "duel choice A 09",
+   "page": "09_turnover_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/09-duel-robo": {
+   "ko": "10주로 단축",
+   "en": "duel choice B 09",
+   "page": "09_turnover_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:metric/average-collection-period": {
+   "ko": "평균 회수기간",
+   "en": "average collection period",
+   "page": "09_turnover_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:term/merchandising-company": {
+   "ko": "상기업",
+   "en": "merchandising company",
+   "page": "09_turnover_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:metric/payables-turnover": {
+   "ko": "매입채무 회전율",
+   "en": "payables turnover",
+   "page": "09_turnover_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:term/deferral": {
+   "ko": "이연항목",
+   "en": "deferral",
+   "page": "09_turnover_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/income-tax-payable": {
+   "ko": "미지급법인세",
+   "en": "income tax payable",
+   "page": "09_turnover_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/retained-earnings": {
+   "ko": "이익잉여금",
+   "en": "retained earnings",
+   "page": "09_turnover_review",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/cash-flow-direct-method": {
+   "ko": "현금흐름표의 구조와 직접법",
+   "en": "cash flow statement and direct method",
+   "page": "10_cashflow_ratios",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/cash-flow-indirect-method": {
+   "ko": "간접법",
+   "en": "indirect method",
+   "page": "10_cashflow_ratios",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/financial-ratio-analysis": {
+   "ko": "재무비율 분석",
+   "en": "financial ratio analysis",
+   "page": "10_cashflow_ratios",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/10-duel-fly": {
+   "ko": "B사 (순이익 170, 영업현금 +270)",
+   "en": "duel choice A 10",
+   "page": "10_cashflow_ratios",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/10-duel-robo": {
+   "ko": "A사 (순이익 300, 영업현금 −50)",
+   "en": "duel choice B 10",
+   "page": "10_cashflow_ratios",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/operating-activities": {
+   "ko": "영업활동",
+   "en": "operating activities",
+   "page": "10_cashflow_ratios",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/investing-activities": {
+   "ko": "투자활동",
+   "en": "investing activities",
+   "page": "10_cashflow_ratios",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/financing-activities": {
+   "ko": "재무활동",
+   "en": "financing activities",
+   "page": "10_cashflow_ratios",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/direct-method": {
+   "ko": "직접법",
+   "en": "direct method",
+   "page": "10_cashflow_ratios",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:metric/current-ratio": {
+   "ko": "유동비율",
+   "en": "current ratio",
+   "page": "10_cashflow_ratios",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:metric/quick-ratio": {
+   "ko": "당좌비율",
+   "en": "quick ratio",
+   "page": "10_cashflow_ratios",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:metric/debt-to-equity": {
+   "ko": "부채비율",
+   "en": "debt-to-equity ratio",
+   "page": "10_cashflow_ratios",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:metric/interest-coverage": {
+   "ko": "이자보상비율",
+   "en": "interest coverage ratio",
+   "page": "10_cashflow_ratios",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:metric/total-asset-turnover": {
+   "ko": "총자산회전율",
+   "en": "total asset turnover",
+   "page": "10_cashflow_ratios",
+   "domain": [
+    "accounting"
+   ]
+  }
+ }
+}
