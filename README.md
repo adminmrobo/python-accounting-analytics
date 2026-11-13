@@ -1,5 +1,7 @@
 # 파이썬과 회계데이터 분석 — AI 회계 컨설팅 연구실
 
+![파이썬과 회계데이터 분석 — P&A 파트너스 본사 타워 모형을 둘러싼 연구실 식구들](assets/series_key.jpg)
+
 > 재무제표를 읽고, 파이썬으로 기업의 값을 계산할 수 있을까?
 
 대학 강의 「파이썬과 회계데이터 분석」(2026-2학기) 교안을 **비전공 독자용 연구실 해설 페이지**로 다시 만든 시리즈입니다. 박사 · 조수(하루) · 초파리 연구원 · 주판봇이 진행하고, 대결에서는 인턴 시아·모아가 심판을, 미공개 식구 X1·X2·X3가 방청석을 맡습니다. 모든 실험을 브라우저에서 직접 움직여 볼 수 있습니다.
@@ -78,7 +80,7 @@
 ## 아직 없는 것
 
 - 7주차(현금흐름표 심화)는 교안이 준비되는 대로 추가합니다(건물의 회색 층).
-- 표지 그림 12장은 아직 넣지 않았습니다. 지시문은 `docs/IMG_PROMPTS_all.md`에 있고, 그림을 `src/build/covers/`에 넣고 다시 빌드하면 대체 표지가 바뀝니다. 공유 미리보기(`assets/og/`)도 그때 만듭니다.
+- 12층 실습 강의안에서 본사 타워로 돌아오는 링크는 아직 없습니다.
 
 ## 파일
 
@@ -88,6 +90,8 @@ index.html                       목차 (로비)
 06m_midterm_review.html          중간 요약정리 및 퀴즈
 KG_00_registry.json              시리즈 지식 그래프 등록부
 docs/IMG_PROMPTS_all.md          표지 그림 지시문 12장 (Genspark용)
+assets/series_key.jpg, og_series.jpg, og/   대표 그림과 공유 미리보기
+src/build/covers/                표지 원본(WebP 1600×900), 빌드할 때 각 쪽에 내장
 pandas-cashflow-lab/             12층 실습 강의안 (따로 만든 책, 이 빌드 도구로 만들지 않음)
 src/pages/p*.py                  페이지 데이터
 src/build/                       빌드 도구 (build.py, tower.py·js·css, sims.js, dash.js, lab.js, make_docs.py, check.js)
