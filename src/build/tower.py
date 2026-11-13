@@ -78,6 +78,8 @@ FLOORS = [
  F('rf', 'R', 'index.html#about', '옥상 정원', 'Roof Garden', '서울 본사', '자료와 원칙', '옥상',
    '간판과 정원이 있는 옥상입니다. 이 사이트를 만든 자료와 원칙은 목차 맨 아래에 있어요.', SOON, True),
 ]
+for _f in FLOORS:
+    if _f['key'] == '12': _f['extra'] = [('pandas-cashflow-lab/generator.html', '학번 재무제표 생성기 바로 가기'), ('pandas-cashflow-lab/colab/pandas_cashflow_lab.ipynb', 'Colab 노트북 받기')]
 for i, f in enumerate(FLOORS):
     f['color'] = '#5d6278' if f['key'] in ('00',) else ('#138a52' if f['key'] in ('06m',) else ('#9aa3b5' if f['soon'] else PAL[(i - 1) % len(PAL)]))
 KEYS = [f['key'] for f in FLOORS]
@@ -90,7 +92,7 @@ def floor_name(f):
 
 def _data(cur):
     fl = [dict(key=f['key'], label=f['label'], dept=f['dept'], en=f['en'], branch=f['branch'], title=f['title'], ep=f['ep'], file=f['file'],
-               biz=f['biz'], color=f['color'], soon=f['soon'], rooms=[dict(id=a, name=b, sec=c) for a, b, c in f['rooms']]) for f in FLOORS]
+               biz=f['biz'], color=f['color'], soon=f['soon'], extra=f.get('extra', []), rooms=[dict(id=a, name=b, sec=c) for a, b, c in f['rooms']]) for f in FLOORS]
     return dict(cur=cur, company=COMPANY, floors=fl)
 
 def _route_items(f):
