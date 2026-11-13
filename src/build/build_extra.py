@@ -14,7 +14,7 @@ def lessons(B):
 def strip(s): return re.sub('<[^>]+>', '', s)
 
 def thumbs_css(B):
-    B.ORDER = getattr(B, 'ORDER', ['01', '02', '03', '04', '05', '06m', '08', '09', '10'])
+    B.ORDER = getattr(B, 'ORDER', ['01', '02', '03', '04', '05', '06m', '08', '09', '10', '11'])
     """표지 WebP에서 320x180 썸네일을 만들어 CSS 배경으로 한 번만 넣는다(목차 머리 모자이크·주차 카드 공용)."""
     import base64, io
     from PIL import Image
@@ -149,8 +149,8 @@ def index(P, B):
 
 
 # ---------- 목차 (파이썬과 회계데이터 분석) ----------
-PART1 = ['01', '02', '03', '04', '05']; PART2 = ['08', '09', '10']
-SOONS = [('7주차', '현금흐름표 심화', '정체·성장·침체 기업의 영업활동 현금흐름'), ('11주차', '회계감사·이익관리 · 기업가치 밸류에이션', '6개사 배수 비교, 통합 밸류에이션'), ('12주차', '기말 요약정리 및 텀페이퍼', '기말고사 · 연구제안서')]
+PART1 = ['01', '02', '03', '04', '05']; PART2 = ['08', '09', '10', '11']
+SOONS = [('7주차', '현금흐름표 심화', '정체·성장·침체 기업의 영업활동 현금흐름')]
 def index(P, B):
     M = B.Moods(); L = lessons(B)
     for k, v in B.DEFM.items(): M.add(k, v)
@@ -161,7 +161,7 @@ def index(P, B):
     st = lambda n: strip(L[n].get('short_title') or L[n]['title'])
     tk = [(n, L[n]['file'], f'{int(n)}주차 · ' + st(n)) for n in PART1] + [('06m', '06m_midterm_review.html', '중간 요약·퀴즈')] + [(n, L[n]['file'], f'{int(n)}주차 · ' + st(n)) for n in PART2]
     mosaic = ''.join(f'<a class="mt th-{k}" href="{f}" title="{e(t)}"><span>{"중간" if k == "06m" else int(k)}</span><i class="sr">{e(t)}</i></a>' for k, f, t in tk)
-    o.append(f'<header class="hero ihero" id="hero"><div class="wrap ihero-grid"><div class="hero-text"><span class="eyebrow">{e(P["eyebrow"])}</span><h1>{P["title"]}</h1><p class="q">{P["question"]}</p><p>{P["intro"]}</p><section class="kpis k4">{kp}</section></div><nav class="mosaic" aria-label="표지로 고르는 전체 9쪽">{mosaic}</nav></div><div class="wrap"><div class="dialog">{"".join(B.say(*t, M) for t in P["hero_talk"])}</div></div></header>')
+    o.append(f'<header class="hero ihero" id="hero"><div class="wrap ihero-grid"><div class="hero-text"><span class="eyebrow">{e(P["eyebrow"])}</span><h1>{P["title"]}</h1><p class="q">{P["question"]}</p><p>{P["intro"]}</p><section class="kpis k4">{kp}</section></div><nav class="mosaic" aria-label="표지로 고르는 전체 10쪽">{mosaic}</nav></div><div class="wrap"><div class="dialog">{"".join(B.say(*t, M) for t in P["hero_talk"])}</div></div></header>')
     T = P['three']
     o.append(f'<section class="level" id="three"><div class="wrap"><div class="three"><h2>처음 오신 분께 — 이 과정을 3줄로</h2><ol><li><b>무엇을</b><span>{T["what"]}</span></li><li><b>왜 중요한가</b><span>{T["why"]}</span></li><li><b>업무에서는</b><span>{T["work"]}</span></li></ol><p class="ok">코드·수식을 몰라도 됩니다. 처음이라면 아래 <a href="#keys">한 줄 핵심 모음</a>부터 보고, 각 주차에서는 칸마다 한 가지 핵심 → 일상 비유 → 실험만 봐도 충분해요. 수식·풀이·코드는 접어 두었어요.</p></div></div></section>')
     def card(n):
@@ -169,12 +169,12 @@ def index(P, B):
         return f'<a href="{Q["file"]}"><span class="ct th-{n}" aria-hidden="true"></span><b>{int(n)}주차 · {e(Q["eyebrow"].split("·",1)[1].strip())}</b><span style="font-weight:700">{e(strip(Q["title"]))}</span><small>{e(strip(Q["question"]))}</small></a>'
     soon = lambda a, t, s: f'<a class="review" href="#about" style="opacity:.6"><b>{a} · 준비 중</b><span style="font-weight:700">{t}</span><small>{s} — 교안이 준비되는 대로 입주합니다.</small></a>'
     part1 = ''.join(card(n) for n in PART1) + '<a class="review" href="06m_midterm_review.html"><span class="ct th-06m" aria-hidden="true"></span><b>요약 · 퀴즈</b><span style="font-weight:700">중간 요약정리 및 퀴즈</span><small>1~5주차 요약, 문제세트 20문항, 업무 계산 문제 5개</small></a>'
-    part2 = soon(*SOONS[0]) + ''.join(card(n) for n in PART2) + soon(*SOONS[1]) + soon(*SOONS[2])
-    o.append(f'<section class="level" id="map"><div class="wrap stack"><div class="lvhead"><h2>주차 지도</h2><p class="lead">강의계획서는 12주입니다. 지금은 교안을 받은 8개 주차와 중간 점검, 모두 아홉 쪽이 열려 있어요. 전반부는 회계의 기초와 도구, 후반부는 리뷰와 진단입니다.</p></div><h3>전반부 · 회계 기초에서 파이썬까지 (1~5주차 · 6주 중간 점검)</h3><div class="series">{part1}</div><h3>후반부 · 리뷰에서 현금흐름·재무비율까지 (7~12주차)</h3><div class="series">{part2}</div></div></section>')
+    part2 = soon(*SOONS[0]) + ''.join(card(n) for n in PART2) + '<a class="review" href="pandas-cashflow-lab/"><b>12층 · 실습</b><span style="font-weight:700">pandas 로 만드는 현금흐름표</span><small>학번으로 만든 회사의 CSV를 Colab에 올려 간접법 현금흐름표·차트·재무비율을 직접 만드는 실습 강의안</small></a>'
+    o.append(f'<section class="level" id="map"><div class="wrap stack"><div class="lvhead"><h2>주차 지도</h2><p class="lead">강의계획서는 12주입니다. 지금은 교안을 받은 9개 주차와 중간 점검, 모두 열 쪽이 열려 있고, 맨 위 12층은 현금흐름표 자동화 실습으로 이어져요. 전반부는 회계의 기초와 도구, 후반부는 리뷰·진단·의사결정입니다.</p></div><h3>전반부 · 회계 기초에서 파이썬까지 (1~5주차 · 6주 중간 점검)</h3><div class="series">{part1}</div><h3>후반부 · 리뷰에서 관리회계와 실습까지 (7~12층)</h3><div class="series">{part2}</div></div></section>')
     kcards = ''.join(f'<div class="kcard"><a href="{L[n]["file"]}"><b>{int(n)}주차</b> {e(st(n))}</a><ol>' + ''.join(f'<li>{e(strip(l["key"]))}</li>' for l in L[n]['levels'] if l.get('key')) + '</ol></div>' for n in PART1 + PART2)
-    o.append(f'<section class="level" id="keys"><div class="wrap stack"><div class="lvhead"><h2>한 줄 핵심 모음 — 8개 주차 24가지</h2><p class="lead">각 주차 칸 맨 위의 「이 칸에서 가져갈 한 가지」를 모았어요. 복습하거나 수업에서 한 장으로 띄울 때 쓰세요.</p></div><div class="kgrid">{kcards}</div></div></section>')
+    o.append(f'<section class="level" id="keys"><div class="wrap stack"><div class="lvhead"><h2>한 줄 핵심 모음 — 9개 주차 27가지</h2><p class="lead">각 주차 칸 맨 위의 「이 칸에서 가져갈 한 가지」를 모았어요. 복습하거나 수업에서 한 장으로 띄울 때 쓰세요.</p></div><div class="kgrid">{kcards}</div></div></section>')
     tabs = ''.join(f'<button class="bt" type="button" aria-pressed="false" data-k="{n}" data-f="{L[n]["file"]}">{int(n)}주차</button>' for n in PART1 + PART2)
-    o.append(f'<section class="level" id="dash"><div class="wrap stack"><div class="lvhead"><h2>종합 대시보드 — 8개 주차를 한 화면에서</h2><p class="lead">주차 버튼을 누르면 그 주차의 핵심 계산이 열립니다. 슬라이더를 움직이거나 ▶ 재생을 눌러 보세요. 같은 대시보드가 각 주차 페이지에도 들어 있어요.</p></div><div class="dtabs" role="group" aria-label="주차 고르기">{tabs}</div><div class="dash panel" id="dashbox"></div><p><a id="dashlink" href="01_accounting_basics.html#dash">1주차 해설 페이지에서 자세히 보기 →</a></p></div></section>')
+    o.append(f'<section class="level" id="dash"><div class="wrap stack"><div class="lvhead"><h2>종합 대시보드 — 9개 주차를 한 화면에서</h2><p class="lead">주차 버튼을 누르면 그 주차의 핵심 계산이 열립니다. 슬라이더를 움직이거나 ▶ 재생을 눌러 보세요. 같은 대시보드가 각 주차 페이지에도 들어 있어요.</p></div><div class="dtabs" role="group" aria-label="주차 고르기">{tabs}</div><div class="dash panel" id="dashbox"></div><p><a id="dashlink" href="01_accounting_basics.html#dash">1주차 해설 페이지에서 자세히 보기 →</a></p></div></section>')
     chips = ' <i>→</i> '.join(f'<span>{e(x)}</span>' for x in P['ladder'])
     o.append(f'<section class="level" id="path"><div class="wrap stack"><div class="lvhead"><h2>개념 사다리</h2><p class="lead">앞 주차의 한계가 다음 주차의 이유가 되도록 이어 두었어요.</p></div><div class="flowchips">{chips}</div><div class="tw"><table class="tb"><tr><th>주차</th><th>핵심 질문</th><th>이 주차가 남긴 한계 → 다음 주차</th></tr>' + ''.join(f'<tr><td>{int(n)}</td><td>{e(strip(L[n]["question"]))}</td><td>{e(strip(L[n]["next_q"]))}</td></tr>' for n in PART1 + PART2) + '</table></div></div></section>')
     how = ''.join(f'<div><b>{a}</b><p>{b}</p></div>' for a, b in P['how'])

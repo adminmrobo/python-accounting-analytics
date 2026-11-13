@@ -317,7 +317,7 @@
   "lab:concept/break-even-point": {
    "ko": "손익분기점",
    "en": "break-even point",
-   "page": "03_payables_prepaid",
+   "page": "11_managerial_accounting",
    "domain": [
     "accounting"
    ]
@@ -849,6 +849,142 @@
    "ko": "총자산회전율",
    "en": "total asset turnover",
    "page": "10_cashflow_ratios",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/limits-of-financial-statements": {
+   "ko": "재무제표와 비율분석의 한계",
+   "en": "limits of financial statements and ratio analysis",
+   "page": "11_managerial_accounting",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/cvp-analysis": {
+   "ko": "원가·조업도·이익(CVP) 분석",
+   "en": "cost-volume-profit analysis",
+   "page": "11_managerial_accounting",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/operating-leverage": {
+   "ko": "영업레버리지와 투자 의사결정",
+   "en": "operating leverage and investment decision",
+   "page": "11_managerial_accounting",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/11-duel-fly": {
+   "ko": "지금 그대로",
+   "en": "duel choice A 11",
+   "page": "11_managerial_accounting",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/11-duel-robo": {
+   "ko": "자동화 설비 도입",
+   "en": "duel choice B 11",
+   "page": "11_managerial_accounting",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:term/window-dressing": {
+   "ko": "윈도 드레싱",
+   "en": "window dressing",
+   "page": "11_managerial_accounting",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/dupont-analysis": {
+   "ko": "DuPont 분해",
+   "en": "DuPont analysis",
+   "page": "11_managerial_accounting",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:metric/roe": {
+   "ko": "자기자본이익률",
+   "en": "return on equity",
+   "page": "11_managerial_accounting",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/managerial-accounting": {
+   "ko": "관리회계",
+   "en": "managerial accounting",
+   "page": "11_managerial_accounting",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/cost-behavior": {
+   "ko": "원가행태",
+   "en": "cost behavior",
+   "page": "11_managerial_accounting",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:method/high-low-method": {
+   "ko": "고저점법",
+   "en": "high-low method",
+   "page": "11_managerial_accounting",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/contribution-margin": {
+   "ko": "공헌이익",
+   "en": "contribution margin",
+   "page": "11_managerial_accounting",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:metric/margin-of-safety": {
+   "ko": "안전한계율",
+   "en": "margin of safety ratio",
+   "page": "11_managerial_accounting",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:metric/dol": {
+   "ko": "영업레버리지도",
+   "en": "degree of operating leverage",
+   "page": "11_managerial_accounting",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:concept/sunk-cost": {
+   "ko": "매몰원가",
+   "en": "sunk cost",
+   "page": "11_managerial_accounting",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:metric/npv": {
+   "ko": "순현재가치",
+   "en": "net present value",
+   "page": "11_managerial_accounting",
+   "domain": [
+    "accounting"
+   ]
+  },
+  "lab:metric/residual-income": {
+   "ko": "잔여이익",
+   "en": "residual income",
+   "page": "11_managerial_accounting",
    "domain": [
     "accounting"
    ]

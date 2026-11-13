@@ -5,15 +5,15 @@
 | 묶음 | 키 | 장수 | 비율 · 크기 | 넣을 자리 |
 |---|---|---|---|---|
 | ① 시리즈 대표 표지 | series_key | 1 | 21:9 2400×1030 | README 맨 위 → 잘라서 `assets/og_series.jpg`(1200×630) |
-| ② 개별 표지 | cover_00 ~ cover_05, cover_06m, cover_08 ~ cover_10 | 10 | 16:9 1920 이상 → 1600×900 WebP | 각 페이지 맨 위(`src/build/covers/cover_XX.webp`), 목차 썸네일·공유 미리보기는 표지에서 자름 |
+| ② 개별 표지 | cover_00 ~ cover_05, cover_06m, cover_08 ~ cover_11 | 11 | 16:9 1920 이상 → 1600×900 WebP | 각 페이지 맨 위(`src/build/covers/cover_XX.webp`), 목차 썸네일·공유 미리보기는 표지에서 자름 |
 
-필수는 **모두 11장**입니다. 받는 순서: ① series_key → ② cover_00 → (그림체 확정) → cover_01 ~ cover_10. 요청은 한 대화에 3~5장씩, 같은 비율끼리 묶어 주세요. cover_00을 먼저 받아 그림체를 확인한 뒤 나머지 요청에 참고 그림으로 함께 올립니다.
+필수는 **모두 12장**입니다(12층 실습 강의안의 대표 그림은 `pandas-cashflow-lab/docs/`에서 따로 다룹니다). 받는 순서: ① series_key → ② cover_00 → (그림체 확정) → cover_01 ~ cover_11. 요청은 한 대화에 3~5장씩, 같은 비율끼리 묶어 주세요. cover_00을 먼저 받아 그림체를 확인한 뒤 나머지 요청에 참고 그림으로 함께 올립니다.
 
-받은 뒤: 표지를 1600×900 WebP(220 KB 이하)로 줄여 `src/build/covers/cover_00.webp` … `cover_10.webp`, `cover_06m.webp`로 저장하고 `python3 src/build/build.py out`을 다시 돌리면 대체 표지(캐릭터 네 명이 나란히 선 그림)가 자동으로 바뀝니다. 공유 미리보기는 같은 표지를 1200×630 JPG로 잘라 `assets/og/cover_00.jpg` …에 둡니다.
+받은 뒤: 표지를 1600×900 WebP(220 KB 이하)로 줄여 `src/build/covers/cover_00.webp` … `cover_11.webp`, `cover_06m.webp`로 저장하고 `python3 src/build/build.py out`을 다시 돌리면 대체 표지(캐릭터 네 명이 나란히 선 그림)가 자동으로 바뀝니다. 공유 미리보기는 같은 표지를 1200×630 JPG로 잘라 `assets/og/cover_00.jpg` …에 둡니다.
 
 고칠 때(공통): `Same four characters, same art style and composition. Change only: {고칠 점}. Still no text, bright daytime office.`
 
-저장 이름 체크리스트: `series_key.png` · `cover_00.png` · `cover_01.png` · `cover_02.png` · `cover_03.png` · `cover_04.png` · `cover_05.png` · `cover_06m.png` · `cover_08.png` · `cover_09.png` · `cover_10.png`
+저장 이름 체크리스트: `series_key.png` · `cover_00.png` · `cover_01.png` · `cover_02.png` · `cover_03.png` · `cover_04.png` · `cover_05.png` · `cover_06m.png` · `cover_08.png` · `cover_09.png` · `cover_10.png` · `cover_11.png`
 
 ## ① 시리즈 대표 표지
 
@@ -39,7 +39,7 @@ Match the art style, proportions and colors of the attached reference images exa
   (if there are no reference images: 16-bit RPG style pixel art, bold dark outline, 2-3 tone shading, small highlights).
 Scene: the bright, airy office of an AI accounting consulting firm in a glass tower, soft daylight through floor-to-ceiling windows, clean white walls and pale gray-blue furniture (#ffffff to #f6f7fb), gentle shadows, pale blue monitor glow, small accents of magenta (#a8329f), green (#138a52) and blue (#2563c9). High-key image that blends into a white web page; no dark background, no night sky. This is the ground-floor lobby.
 Center: a tall glass office tower as a clean architectural scale model on a white plinth, about a dozen floors, each floor band glowing in a different soft color (blue, green, red, purple, amber, teal), a few upper floors still gray (not yet opened), a small roof garden with a wireframe globe on top. In front of it a tiny coffee-shop model (the client) with a koi-fish shaped sign (no letters).
-Around the tower model, small floating icons rise floor by floor from left to right: a balance scale, a receipt slip, a calendar page, an oven, four containers, a milk shelf, a turning wheel, a water tank with three pipes, a row of gauges.
+Around the tower model, small floating icons rise floor by floor from left to right: a balance scale, a receipt slip, a calendar page, an oven, four containers, a milk shelf, a turning wheel, a water tank with three pipes, a row of gauges, a lever with a heavy block.
 All four main characters:
   chibi scientist, thin teal rectangular glasses, spiky black hair with one white streak, small ponytail at the back, white lab coat over black vest and tie, center-back, pointing at one glowing floor;
   girl researcher, long pink hair with two round buns and a navy streak, blue eyes, white lab coat over lavender hoodie, jeans, beside the plinth, holding a blank clipboard;
@@ -52,7 +52,7 @@ Mood: a welcoming first day at a friendly consulting firm.
 No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands.
 ```
 
-## ② 개별 표지 10장
+## ② 개별 표지 11장
 
 ### cover_00 — 파이썬과 회계데이터 분석 (목차)
 
@@ -418,6 +418,43 @@ All four characters together:
   anthropomorphic fruit fly researcher, black body, big red compound eyes, blue helmet with a gold stripe and pink and blue cables, white lab coat over a black vest, black gloves, transparent wings, on the left facing right, checking where the amber pipe drains to;
   boxy beige retro CRT-monitor robot, dark green screen face with mint pixel eyes and mouth, short antenna topped with a red-brown abacus bead, gray segmented arms, two small tank treads, holding a wooden abacus, on the right facing left, cheering at a big trophy-shaped profit balloon that is not connected to the tank.
 Visual metaphor of the topic: a glass tank of clear blue water (cash) fed and drained by three pipes with colored valves — green (operations), amber (investing), blue (financing) — and on the wall a medical-checkup style panel of eight blank gauges.
+Composition: keep every face and hand inside the central safe area (12% margin left and right, 10% top, 18% bottom);
+  keep the bottom-left corner light and simple (plain white wall); let the bottom edge fade to near-white so the image melts into a white page; the topic prop is the most saturated spot.
+Mood: curious, friendly rivalry, the moment before the result.
+No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands.
+```
+
+### cover_11 — 관리회계 — 숫자의 한계에서 의사결정까지
+
+| 항목 | 내용 |
+|---|---|
+| 키 · 판 | cover_11 · L (16:9, 1920 이상) |
+| 페이지 | `11_managerial_accounting.html` |
+| 장소 | P&A 파트너스 본사 타워 11F 관리회계팀 |
+| 주제 은유 | a large seesaw-like lever on the meeting-room floor: on one end a heavy block (fixed cost) with a small robot arm machine on top, on the other end a stack of sales boxes; a glowing break-even mark on the floor where two light beams (a green revenue beam and a red cost beam) cross |
+| 대체 글(alt) | 관리회계 — 숫자의 한계에서 의사결정까지의 표지: 박사, 조수, 초파리 연구원, 주판봇이 AI 회계 컨설팅회사 11F 관리회계팀에서 주제 소품을 둘러싼 장면 |
+
+**Genspark에 붙여 넣기 ↓**
+```
+웹페이지 맨 위에 거는 표지 그림 1장을 만들어 줘.
+- 비율 16:9, 가로 1920px 이상
+- 첨부한 참고 이미지의 네 캐릭터(박사, 조수, 초파리 연구원, 주판봇)를 같은 그림체·같은 외형으로, 넷 모두 등장
+- 배경은 실험실이 아니라 밝은 회계 컨설팅회사 사무실(유리 타워 안)
+- 그림 안에 글자·숫자·로고를 넣지 말 것
+- 얼굴과 손은 가장자리에서 떨어진 가운데 영역에, 왼쪽 아래 구석은 밝고 단순하게(흰 벽), 아래 가장자리는 흰 페이지로 자연스럽게 이어지게
+- 밤 장면·어두운 배경 금지, 전체적으로 밝은 낮 장면
+아래 영어 프롬프트를 그대로 써 줘.
+
+Website top cover illustration, wide 16:9.
+Match the art style, proportions and colors of the attached reference images exactly
+  (if there are no reference images: 16-bit RPG style pixel art, bold dark outline, 2-3 tone shading, small highlights).
+Scene: the bright, airy office of an AI accounting consulting firm in a glass tower, soft daylight through floor-to-ceiling windows, clean white walls and pale gray-blue furniture (#ffffff to #f6f7fb), gentle shadows, pale blue monitor glow, small accents of magenta (#a8329f), green (#138a52) and blue (#2563c9). High-key image that blends into a white web page; no dark background, no night sky. This room is an eleventh-floor boardroom with a long table and a factory scale model by the window.
+All four characters together:
+  chibi scientist, thin teal rectangular glasses, spiky black hair with one white streak, small ponytail at the back, white lab coat over black vest and tie, center-back, pointing at the spot where the two beams cross;
+  girl researcher, long pink hair with two round buns and a navy streak, blue eyes, white lab coat over lavender hoodie, jeans, sorting cost blocks into two trays, one tray that moves on wheels and one tray bolted to the floor;
+  anthropomorphic fruit fly researcher, black body, big red compound eyes, blue helmet with a gold stripe and pink and blue cables, white lab coat over a black vest, black gloves, transparent wings, on the left facing right, measuring the lever with a ruler, doubtful about the heavy block;
+  boxy beige retro CRT-monitor robot, dark green screen face with mint pixel eyes and mouth, short antenna topped with a red-brown abacus bead, gray segmented arms, two small tank treads, holding a wooden abacus, on the right facing left, hugging the small robot arm machine, eager to install it.
+Visual metaphor of the topic: a large seesaw-like lever on the meeting-room floor: on one end a heavy block (fixed cost) with a small robot arm machine on top, on the other end a stack of sales boxes; a glowing break-even mark on the floor where two light beams (a green revenue beam and a red cost beam) cross.
 Composition: keep every face and hand inside the central safe area (12% margin left and right, 10% top, 18% bottom);
   keep the bottom-left corner light and simple (plain white wall); let the bottom edge fade to near-white so the image melts into a white page; the topic prop is the most saturated spot.
 Mood: curious, friendly rivalry, the moment before the result.
