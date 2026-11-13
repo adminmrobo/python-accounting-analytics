@@ -5,7 +5,7 @@
 대학 강의 「파이썬과 회계데이터 분석」(2026-2학기) 교안을 **비전공 독자용 연구실 해설 페이지**로 다시 만든 시리즈입니다. 박사 · 조수(하루) · 초파리 연구원 · 주판봇이 진행하고, 대결에서는 인턴 시아·모아가 심판을, 미공개 식구 X1·X2·X3가 방청석을 맡습니다. 모든 실험을 브라우저에서 직접 움직여 볼 수 있습니다.
 
 - **바로 보기:** https://adminmrobo.github.io/python-accounting-analytics/
-- **실습·과제 책:** [pandas 로 만드는 현금흐름표](https://adminmrobo.github.io/python-accounting-analytics/pandas-cashflow-lab/) — 손익계산서·재무상태표에서 간접법 현금흐름표를 코드로 만들고, 엑셀·PDF 를 생성AI 로 읽는 앱까지 (37장, 과제 안내 포함). 폴더 `pandas-cashflow-lab/`
+- **실습·과제 책:** [pandas 로 만드는 현금흐름표](https://adminmrobo.github.io/python-accounting-analytics/pandas-cashflow-lab/) — 손익계산서·재무상태표에서 간접법 현금흐름표를 pandas 로 만들고, 학번으로 만든 회사의 CSV 를 Colab 에 올려 현금흐름표·차트·재무비율을 만든 뒤 생성AI 로 분석보고서까지 (36장, 과제 안내 포함). 폴더 `pandas-cashflow-lab/`, 생성기 `pandas-cashflow-lab/generator.html`
 
 ## 첫 화면 — P&A 파트너스 본사 타워 (3D)
 

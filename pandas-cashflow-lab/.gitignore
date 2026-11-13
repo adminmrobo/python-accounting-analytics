@@ -1,4 +1,3 @@
 __pycache__/
 build/_preview/
-.streamlit/secrets.toml
-.env
+build/sample/

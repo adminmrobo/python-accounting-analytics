@@ -11,6 +11,29 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = ROOT   # 결과: repo 맨 위 index.html, assets/img
 IMG = os.path.join(SITE, "assets", "img")
 sys.path.insert(0, os.path.join(ROOT, "build"))
+from snippets import lint
+
+SAMPLE_ID = "20261005"                     # 페이지에 실행 결과를 싣는 표본 학번
+SESSION = tempfile.mkdtemp()               # Colab 세션처럼 파일이 남는 폴더 (chain 카드와 한 셀 카드가 함께 쓴다)
+CHAIN = {"__name__": "__main__"}           # Colab 노트북처럼 변수가 이어지는 이름공간 (chain=True 카드)
+
+def make_sample():
+    """generator.html 의 생성 코드를 node 로 돌려 표본 학번의 CSV 를 만든다 (학생이 받는 파일과 같다)."""
+    import subprocess, types, shutil
+    subprocess.run(["node", os.path.join(ROOT, "build", "gen_sample.js"), SAMPLE_ID], check=True, capture_output=True)
+    src = os.path.join(ROOT, "build", "sample", "재무제표_" + SAMPLE_ID + ".csv")
+    def upload():                          # google.colab.files.upload 흉내: 파일을 지금 폴더에 놓고 {이름: 내용} 을 돌려준다
+        name = os.path.basename(src)
+        shutil.copy(src, name)
+        print(f"Saving {name} to {name}")
+        return {name: open(name, "rb").read()}
+    def download(name):                    # Colab 에서는 브라우저가 파일을 받는다. 출력은 없다
+        assert os.path.exists(name), name
+    files = types.SimpleNamespace(upload=upload, download=download)
+    colab = types.ModuleType("google.colab"); colab.files = files
+    google = sys.modules.get("google") or types.ModuleType("google")
+    google.colab = colab
+    sys.modules["google"] = google; sys.modules["google.colab"] = colab
 
 def load(path):
     spec = importlib.util.spec_from_file_location(os.path.basename(path)[:-3], path)
@@ -19,6 +42,9 @@ def load(path):
 def run_card(m):
     c = dict(m.CARD)
     cid = c["id"]
+    lint(c["code"], cid)                      # 들여쓰기·def·for 금지
+    assert c.get("xl"), cid + ": 엑셀 설명(xl)이 없다"
+    c["xl"] = [list(r) for r in c["xl"]]
     for f in glob.glob(os.path.join(IMG, cid + ".png")) + glob.glob(os.path.join(IMG, cid + "-*.png")):
         os.remove(f)
     imgs = []
@@ -31,9 +57,10 @@ def run_card(m):
         plt.close("all")
     plt.close("all")
     orig_show = plt.show; plt.show = show
-    ns = {"__name__": "__main__"}
+    chain = c.get("chain", False)
+    ns = CHAIN if chain else {"__name__": "__main__"}
     buf = io.StringIO()
-    cwd = os.getcwd(); tmp = tempfile.mkdtemp()
+    cwd = os.getcwd(); tmp = SESSION if (chain or c.get("session")) else tempfile.mkdtemp()
     try:
         os.chdir(tmp)
         plt.rcParams.update(matplotlib.rcParamsDefault)
@@ -47,10 +74,11 @@ def run_card(m):
     c["imgs"] = imgs
     c["stages"] = m.stages(ns, out)
     c.setdefault("tip", ""); c.setdefault("talk", [])
-    c.pop("kit", None)
+    c.pop("kit", None); c.pop("session", None)
     return c
 
 def main(only):
+    make_sample()
     files = sorted(glob.glob(os.path.join(ROOT, "build", "cards", "*.py")))
     cards, bad = [], []
     for p in files:
