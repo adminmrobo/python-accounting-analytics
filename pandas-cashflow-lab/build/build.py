@@ -42,6 +42,12 @@ def load(path):
 def run_card(m):
     c = dict(m.CARD)
     cid = c["id"]
+    if c.get("chain") and cid not in ("upload", "split"):   # 이어 실행하는 셀: 앞 셀(5-1·5-2)을 건너뛰면 NameError 대신 안내문
+        c["code"] = ('# ▶ 이어서 실행하는 셀: 5장 첫 카드(CSV 올리기)부터 이 카드 앞까지를 같은 노트북에서 차례로 먼저 실행한다\n'
+                     'assert "fs" in globals() and "p" in globals(), "앞 셀을 먼저 실행하세요: 5-1 CSV 올리기 → 5-2 두 표로 나누기 → … → 이 셀"\n\n' + c["code"])
+    elif cid == "split":
+        c["code"] = ('# ▶ 이어서 실행하는 셀: 바로 앞 카드(5-1 CSV 올리기)를 같은 노트북에서 먼저 실행한다\n'
+                     'assert "fs" in globals(), "앞 셀을 먼저 실행하세요: 5-1 CSV 올리기 → 이 셀"\n\n' + c["code"])
     lint(c["code"], cid)                      # 들여쓰기·def·for 금지
     assert c.get("xl"), cid + ": 엑셀 설명(xl)이 없다"
     c["xl"] = [list(r) for r in c["xl"]]
