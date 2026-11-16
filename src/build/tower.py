@@ -128,11 +128,12 @@ def _panel_index(f):
     for g in reversed(FLOORS[1:]):
         rows.append(f'<li data-k="{g["key"]}"><a href="{g["file"]}"><span class="tw-badge" style="--c:{g["color"]}">{e(g["label"])}</span><b>{e(g["dept"])}</b><span>{e(g["ep"])} · {e(g["title"])}</span></a></li>')
     rows.append(f'<li data-k="00" class="here"><a href="#three"><span class="tw-badge" style="--c:{f["color"]}">L</span><b>로비 · 안내 데스크</b><span>지금 계신 곳 · 이 목차 쪽</span></a></li>')
+    rows.append('<li data-k="cafe"><a href="cafe-quiz/"><span class="tw-badge" style="--c:#b5651d">☕</span><b>카페 · 퀴즈방</b><span>타워 옆 별관 · 기말고사 모의 퀴즈</span></a></li>')
     clocks = ''.join(f'<span data-tz="{tz}"><b>{c}</b><i>--:--</i></span>' for c, tz in CLOCKS)
     return f'''<aside class="tw-panel" aria-label="층별 안내판">
 <p class="tw-co"><b>{e(COMPANY["ko"])}</b> {e(COMPANY["hq"])} · <span>{e(COMPANY["en"])}</span></p>
 <h2>층별 안내판</h2>
-<p class="tw-biz">{e(COMPANY["motto"])}. 아홉 팀이 한 층씩 쓰고, 5층과 7층 사이 라운지(6M)에서 중간 요약정리와 퀴즈를 봅니다. 맨 위 12층은 현금흐름표 자동화 실습실이고, 회색 7층은 입주 준비 중이에요. 건물의 층을 누르거나 아래 안내판에서 골라 올라가세요.</p>
+<p class="tw-biz">{e(COMPANY["motto"])}. 아홉 팀이 한 층씩 쓰고, 5층과 7층 사이 라운지(6M)에서 중간 요약정리와 퀴즈를 봅니다. 맨 위 12층은 현금흐름표 자동화 실습실이고, 회색 7층은 입주 준비 중이에요. 타워 왼쪽 카페는 기말고사 모의 퀴즈를 푸는 퀴즈방이에요. 건물의 층을 누르거나 아래 안내판에서 골라 올라가세요.</p>
 <div class="tw-clock" aria-label="본사와 해외 고객사 시각">{clocks}</div>
 <ol class="tw-dir">{"".join(rows)}</ol>
 <p class="tw-note">{e(COMPANY["note"])}</p>
