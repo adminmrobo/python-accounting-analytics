@@ -1,0 +1,369 @@
+{
+ "version": "1.0",
+ "made": "2026-11-24",
+ "via": "rehang-2026-11-24",
+ "domains": [
+  "acct",
+  "data",
+  "ml"
+ ],
+ "note": "분야 뼈대 주제에 다시 걸기(ai-lab-retrofit 15장). links는 자동 후보이며 틀린 줄은 지우면 된다. 빌드 스크립트가 있는 저장소는 빌드 끝에 rehang.apply_overlay()가 이 파일을 적용한다.",
+ "topics": {
+  "lab:topic/accounting-equation": {
+   "ko": "회계 등식",
+   "en": "Accounting equation",
+   "domain": [
+    "acct"
+   ],
+   "level": 1
+  },
+  "lab:topic/adjusting-entries": {
+   "ko": "수정분개",
+   "en": "Adjusting entries",
+   "domain": [
+    "acct"
+   ],
+   "level": 1
+  },
+  "lab:topic/balance-sheet": {
+   "ko": "재무상태표",
+   "en": "Statement of financial position",
+   "domain": [
+    "acct"
+   ],
+   "level": 1
+  },
+  "lab:topic/break-even": {
+   "ko": "손익분기",
+   "en": "Break-even analysis",
+   "domain": [
+    "acct"
+   ],
+   "level": 2
+  },
+  "lab:topic/cf-activities": {
+   "ko": "영업·투자·재무 활동",
+   "en": "Operating, investing and financing activities",
+   "domain": [
+    "acct"
+   ],
+   "level": 2
+  },
+  "lab:topic/cost-flow-assumptions": {
+   "ko": "원가흐름 가정",
+   "en": "Cost flow assumptions",
+   "domain": [
+    "acct"
+   ],
+   "level": 2
+  },
+  "lab:topic/depreciation": {
+   "ko": "감가상각",
+   "en": "Depreciation",
+   "domain": [
+    "acct"
+   ],
+   "level": 2
+  },
+  "lab:topic/expected-credit-loss": {
+   "ko": "기대신용손실",
+   "en": "Expected credit loss",
+   "domain": [
+    "acct"
+   ],
+   "level": 3
+  },
+  "lab:topic/financial-ratios": {
+   "ko": "수익성·안정성·활동성 비율",
+   "en": "Profitability, solvency and activity ratios",
+   "domain": [
+    "acct"
+   ],
+   "level": 2
+  },
+  "lab:topic/fs-elements": {
+   "ko": "재무제표 요소",
+   "en": "Elements of financial statements",
+   "domain": [
+    "acct"
+   ],
+   "level": 1
+  },
+  "lab:topic/income-statement": {
+   "ko": "포괄손익계산서",
+   "en": "Statement of comprehensive income",
+   "domain": [
+    "acct"
+   ],
+   "level": 1
+  },
+  "lab:topic/inventory-cost": {
+   "ko": "취득원가",
+   "en": "Cost of inventories",
+   "domain": [
+    "acct"
+   ],
+   "level": 2
+  },
+  "lab:topic/journal-entries": {
+   "ko": "분개",
+   "en": "Journal entries",
+   "domain": [
+    "acct"
+   ],
+   "level": 1
+  },
+  "lab:topic/recognition-measurement": {
+   "ko": "인식·측정",
+   "en": "Recognition and measurement",
+   "domain": [
+    "acct"
+   ],
+   "level": 1
+  },
+  "lab:topic/retained-earnings": {
+   "ko": "이익잉여금",
+   "en": "Retained earnings",
+   "domain": [
+    "acct"
+   ],
+   "level": 2
+  },
+  "lab:topic/transaction-price": {
+   "ko": "거래가격",
+   "en": "Transaction price",
+   "domain": [
+    "acct"
+   ],
+   "level": 2
+  },
+  "lab:topic/trial-balance": {
+   "ko": "시산표",
+   "en": "Trial balance",
+   "domain": [
+    "acct"
+   ],
+   "level": 1
+  }
+ },
+ "links": {
+  "lab:concept/accounting-equation": {
+   "topic": "lab:topic/accounting-equation",
+   "score": 3,
+   "why": "이름 같음",
+   "ko": "회계등식"
+  },
+  "lab:concept/accounts-payable": {
+   "topic": "lab:topic/balance-sheet",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "매입채무"
+  },
+  "lab:concept/accounts-receivable": {
+   "topic": "lab:topic/balance-sheet",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "매출채권"
+  },
+  "lab:concept/accrual-basis": {
+   "topic": "lab:topic/recognition-measurement",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "발생주의"
+  },
+  "lab:concept/accumulated-depreciation": {
+   "topic": "lab:topic/depreciation",
+   "score": 2,
+   "why": "주제 이름이 개념 이름에 들어 있음",
+   "ko": "감가상각누계액"
+  },
+  "lab:concept/acquisition-cost": {
+   "topic": "lab:topic/inventory-cost",
+   "score": 3,
+   "why": "이름 같음",
+   "ko": "취득원가"
+  },
+  "lab:concept/aging-analysis": {
+   "topic": "lab:topic/expected-credit-loss",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "연령 분석"
+  },
+  "lab:concept/allowance-for-doubtful-accounts": {
+   "topic": "lab:topic/expected-credit-loss",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "대손충당금"
+  },
+  "lab:concept/asset": {
+   "topic": "lab:topic/fs-elements",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "자산"
+  },
+  "lab:concept/bad-debt-expense": {
+   "topic": "lab:topic/expected-credit-loss",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "대손상각비"
+  },
+  "lab:concept/balance-sheet": {
+   "topic": "lab:topic/balance-sheet",
+   "score": 3,
+   "why": "이름 같음",
+   "ko": "재무상태표"
+  },
+  "lab:concept/break-even-point": {
+   "topic": "lab:topic/break-even",
+   "score": 2,
+   "why": "주제 이름이 개념 이름에 들어 있음",
+   "ko": "손익분기점"
+  },
+  "lab:concept/cash-basis": {
+   "topic": "lab:topic/recognition-measurement",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "현금주의"
+  },
+  "lab:concept/cash-flow-statement": {
+   "topic": "lab:topic/cf-activities",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "현금흐름표"
+  },
+  "lab:concept/cost-of-goods-sold": {
+   "topic": "lab:topic/cost-flow-assumptions",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "매출원가와 재고자산의 연결"
+  },
+  "lab:concept/depreciation": {
+   "topic": "lab:topic/depreciation",
+   "score": 3,
+   "why": "이름 같음",
+   "ko": "감가상각"
+  },
+  "lab:concept/equity": {
+   "topic": "lab:topic/fs-elements",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "자본"
+  },
+  "lab:concept/financial-statements": {
+   "topic": "lab:topic/fs-elements",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "재무제표 3종의 연결"
+  },
+  "lab:concept/fixed-variable-cost": {
+   "topic": "lab:topic/break-even",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "고정비·변동비와 손익분기점"
+  },
+  "lab:concept/gross-margin": {
+   "topic": "lab:topic/financial-ratios",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "매출총이익률"
+  },
+  "lab:concept/gross-profit": {
+   "topic": "lab:topic/income-statement",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "매출총이익"
+  },
+  "lab:concept/income-statement": {
+   "topic": "lab:topic/income-statement",
+   "score": 2,
+   "why": "개념 이름이 주제 이름에 들어 있음",
+   "ko": "손익계산서"
+  },
+  "lab:concept/inventory": {
+   "topic": "lab:topic/inventory-cost",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "재고자산"
+  },
+  "lab:concept/liability": {
+   "topic": "lab:topic/fs-elements",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "부채"
+  },
+  "lab:concept/prepaid-expense": {
+   "topic": "lab:topic/adjusting-entries",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "선급비용"
+  },
+  "lab:concept/retained-earnings": {
+   "topic": "lab:topic/retained-earnings",
+   "score": 3,
+   "why": "이름 같음",
+   "ko": "이익잉여금"
+  },
+  "lab:concept/trial-balance": {
+   "topic": "lab:topic/trial-balance",
+   "score": 3,
+   "why": "이름 같음",
+   "ko": "시산표"
+  },
+  "lab:method/declining-balance-depreciation": {
+   "topic": "lab:topic/depreciation",
+   "score": 2,
+   "why": "주제 이름이 개념 이름에 들어 있음",
+   "ko": "정률법 감가상각"
+  },
+  "lab:metric/11-duel": {
+   "topic": "lab:topic/break-even",
+   "score": 2,
+   "why": "주제 이름이 개념 이름에 들어 있음",
+   "ko": "손익분기 매출 (낮을수록 안전)"
+  },
+  "lab:term/cash-discount": {
+   "topic": "lab:topic/transaction-price",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "현금할인"
+  },
+  "lab:term/credit": {
+   "topic": "lab:topic/journal-entries",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "대변"
+  },
+  "lab:term/debit": {
+   "topic": "lab:topic/journal-entries",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "차변"
+  },
+  "lab:term/net-carrying-amount": {
+   "topic": "lab:topic/depreciation",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "순장부금액"
+  }
+ },
+ "retag": [
+  {
+   "from": [
+    "accounting"
+   ],
+   "to": [
+    "acct"
+   ]
+  },
+  {
+   "from": [
+    "accounting",
+    "coding"
+   ],
+   "to": [
+    "acct",
+    "data"
+   ]
+  }
+ ]
+}
